@@ -1,7 +1,7 @@
 <!-- ============================================================== -->
 <!-- Left Sidebar - style you can find in sidebar.scss  -->
 <!-- ============================================================== -->
-<aside class="left-sidebar" data-sidebarbg="skin5">
+<aside class="left-sidebar" style="background-color: #7460ee">
   <!-- Sidebar scroll-->
   <div class="scroll-sidebar">
     <!-- Sidebar navigation-->
@@ -9,15 +9,15 @@
       <ul id="sidebarnav" class="pt-4">
         <li class="sidebar-item">
           <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('home') }}" aria-expanded="false"><i
-              class="mdi mdi-view-dashboard"></i><span class="hide-menu">HOME</span></a>
+              class="mdi mdi-view-dashboard"></i><span class="hide-menu">TABLERO</span></a>
         </li>
         <li class="sidebar-item">
           <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('categories') }}" aria-expanded="false"><i
-              class="mdi mdi-tag"></i><span class="hide-menu">CATEGORIAS</span></a>
+              class="mdi mdi-tag"></i><span class="hide-menu">EVENTOS</span></a>
         </li>
         <li class="sidebar-item">
           <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><i
-              class="fas fa-shopping-cart"></i><span class="hide-menu">PRODUCTOS</span></a>
+              class="fas fa-shopping-cart"></i><span class="hide-menu">PARTICIPANTES</span></a>
         </li>
         <li class="sidebar-item">
           <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><i
