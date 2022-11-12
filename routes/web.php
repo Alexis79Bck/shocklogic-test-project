@@ -17,7 +17,7 @@ use App\http\Livewire\MatrixTheme\Category\Categories as MatrixThemeCategoriesCo
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.theme.login');
 });
 
 Auth::routes();

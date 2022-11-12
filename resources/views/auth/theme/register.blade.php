@@ -105,6 +105,19 @@
                         {{-- <div id="passwordHelp" class="form-text text-danger">The password must contain: <br> Minimun 8 Characters <br> 1 Uppercase letter <br> 1 Lowercase letter <br> 1 Number <br> Special symbol: #, $, %, &, ?, ?, *, -, +</div> --}}
                     </form>
                 </div>
+                <div class="card-footer">
+                
+                    <div class="row mb-0 mx-auto">
+                        <span class="alert alert-info text-end" >
+                            <strong>Have an account? Click here to 
+                                <a href="{{ route('login') }}" class="text-link" >
+                                    Log In.
+                                </a>
+                            </strong>
+                        </span>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </div>

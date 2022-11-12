@@ -58,6 +58,18 @@
                         </div>
                     </form>
                 </div>
+
+                <div class="card-footer">
+                    <div class="row mb-0 mx-auto">
+                        <span class="alert alert-info text-end" >
+                            <strong>Don't have an account, yet? 
+                                <a href="{{ route('register') }}" class="text-link" >
+                                    Sign Up here.
+                                </a>
+                            </strong>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
