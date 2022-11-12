@@ -102,7 +102,7 @@
                             <button type="submit" class="btn btn-primary">     Sign Up    </button>
 
                         </div>
-                        <div id="passwordHelp" class="form-text text-danger">The password must contain: <br> Minimun 8 Characters <br> 1 Uppercase letter <br> 1 Lowercase letter <br> 1 Number <br> Special symbol: #, $, %, &, ?, ?, *, -, +</div>
+                        {{-- <div id="passwordHelp" class="form-text text-danger">The password must contain: <br> Minimun 8 Characters <br> 1 Uppercase letter <br> 1 Lowercase letter <br> 1 Number <br> Special symbol: #, $, %, &, ?, ?, *, -, +</div> --}}
                     </form>
                 </div>
             </div>
@@ -111,7 +111,7 @@
 </div>
 @endsection
 
-@section('JSCustom')
+{{-- @section('JSCustom')
 <script src="{{asset('theme/assets/libs/jquery-validation/jquery.validate.min.js')}}"></script>
 
 <script>
@@ -164,4 +164,4 @@ $().ready(function(){
 })
 
 </script>
-@endsection
+@endsection --}}

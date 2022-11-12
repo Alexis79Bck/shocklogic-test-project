@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Company extends Model
+class Event extends Model
 {
     use HasFactory;
 
+    protected $table ='events';
+    
     protected $fillable = [
         'name',
-        'address',
-        'phone',
-        'taxpayer_id'
+        'bannerimage',        
     ];
 }

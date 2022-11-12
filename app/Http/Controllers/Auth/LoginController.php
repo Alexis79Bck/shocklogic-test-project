@@ -43,8 +43,5 @@ class LoginController extends Controller
         return view('auth.theme.login');
     }
 
-    public function username()
-    {
-        return 'username';     //original   --> return 'email';
-    }
+    
 }
