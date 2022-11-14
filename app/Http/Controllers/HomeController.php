@@ -23,9 +23,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if (auth()->user()->admin){
+            return redirect()->route('admin.home')->with('message','Welcome ADMIN, ' . auth()->user()->firstname . ' ' . auth()->user()->familyname);
+        }else{
+            return redirect()->route('web.home')->with('message','Welcome, ' . auth()->user()->firstname . ' ' . auth()->user()->familyname);
+        }
 
-        return view('home');
+
     }
 
-   
+
 }

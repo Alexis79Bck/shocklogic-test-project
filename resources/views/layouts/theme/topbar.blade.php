@@ -5,39 +5,25 @@
     @auth
     <nav class="navbar top-navbar navbar-expand-md " >
         <div class="navbar-header" >
-            <!-- ============================================================== -->
-            <!-- Logo -->
-            <!-- ============================================================== -->
-            <a class="navbar-brand" href="{{ route('home')}}">
+
+            <a class="navbar-brand" href="{{ url('/')}}">
                 <!-- Logo icon -->
-                <b class="logo-icon ps-2">
-                    <img src="{{ asset('theme/assets/images/' . config('app.logo_image')) }}" alt="homepage" class="light-logo" width="60" heigt="60" />
-                </b>
+                <div >
+                    <img src="{{ asset('theme/assets/images/' . config('app.logo_text')) }}" alt="logo"  width="96" heigt="72" />
+                </div>
                 <!--End Logo icon -->
             </a>
-            <!-- ============================================================== -->
-            <!-- End Logo -->
-            <!-- ============================================================== -->
+
 
             <a class="nav-toggler d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>  <!-- Toggle which is visible on mobile only -->
         </div>
 
-        <div class="navbar-collapse collapse" id="navbarSupportedContent" >
-            <!-- ============================================================== -->
-            <!-- toggle and nav items data-navbarbg="skin5"-->
-            <!-- ============================================================== -->
+        <div class="navbar-collapse collapse"  >
+
             <ul class="navbar-nav float-start me-auto">
-                <li class="nav-item d-none d-lg-block">
-                <a class="nav-link sidebartoggler " href="javascript:void(0)"
-                    data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a>
-                </li>
-
-
 
             </ul>
-            <!-- ============================================================== -->
-            <!-- Right side toggle and nav items -->
-            <!-- ============================================================== -->
+
             <ul class="navbar-nav float-end">
 
                 <!-- ============================================================== -->
@@ -88,6 +74,4 @@
     </nav>
     @endauth
 </header>
-<!-- ============================================================== -->
-<!-- End Topbar header -->
-<!-- ============================================================== -->
+

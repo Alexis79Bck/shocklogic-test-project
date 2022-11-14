@@ -11,8 +11,9 @@
 
 <style>
   body {
-    background-image: url({{ asset('theme/assets/images/orange-blur-abstract-background.jpg') }}) cover;
-    
+    background-image: url({{ asset('theme/assets/images/orange-blur-abstract-background.jpg') }});
+    background-size: cover;
+
   }
 .colored-toast.swal2-icon-success {
   background-color: #66db22 !important;

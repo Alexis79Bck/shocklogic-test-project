@@ -1,9 +1,15 @@
-@extends('layouts.theme.app')
+@extends('layouts.app')
 
 
 
 @section('content')
-<div class="container-fluid">
+<div class="row float-center ">
+
+    @include('common.messages')
+
+</div>
+<div class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="text-center">
@@ -13,3 +19,5 @@
     </div>
 </div>
 @endsection
+
+

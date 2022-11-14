@@ -20,7 +20,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body >
   <!-- ============================================================== -->
   <!-- Preloader - style you can find in spinners.css -->
   <!-- ============================================================== -->
@@ -35,13 +35,14 @@
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
   <!-- ============================================================== -->
-  <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+  <div  id="main-wrapper" data-layout="vertical"  data-sidebartype="full"
     data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 
     @include('layouts.theme.topbar')
     @auth
+
         @include('layouts.theme.sidebar')
-        <div class="page-wrapper">
+        <div class="page-wrapper vh-100">
 
 
 
@@ -55,7 +56,7 @@
             <!-- End Container fluid / Content -->
             <!-- ============================================================== -->
 
-            @include('layouts.theme.footer')
+
 
         </div>
     @else
@@ -69,7 +70,7 @@
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
 
-        @include('layouts.theme.footer')
+       
     @endauth
 
     <!-- ============================================================== -->
@@ -83,6 +84,7 @@
   <!-- ============================================================== -->
   <!-- End Wrapper -->
   <!-- ============================================================== -->
+  @include('layouts.theme.footer')
   <!-- ============================================================== -->
   <!-- All Jquery -->
   <!-- ============================================================== -->

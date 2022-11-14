@@ -4,15 +4,16 @@
 <aside class="left-sidebar" style="background-color: #7460ee">
   <!-- Sidebar scroll-->
   <div class="scroll-sidebar">
-    <!-- Sidebar navigation-->
+    @if (auth()->user()->admin)
+    <!-- Sidebar navigation for Admin-->
     <nav class="sidebar-nav">
       <ul id="sidebarnav" class="pt-4">
         <li class="sidebar-item">
-          <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('home') }}" aria-expanded="false"><i
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin.home') }}" aria-expanded="false"><i
               class="mdi mdi-view-dashboard"></i><span class="hide-menu">TABLERO</span></a>
         </li>
         <li class="sidebar-item">
-          <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('categories') }}" aria-expanded="false"><i
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><i
               class="mdi mdi-tag"></i><span class="hide-menu">EVENTOS</span></a>
         </li>
         <li class="sidebar-item">
@@ -21,44 +22,37 @@
         </li>
         <li class="sidebar-item">
           <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><i
-              class="mdi mdi-cash"></i><span class="hide-menu">VENTA</span></a>
+              class="mdi mdi-cash"></i><span class="hide-menu">REPORTE</span></a>
         </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><i
-              class="mdi mdi-key"></i><span class="hide-menu">ROLES</span></a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link sidebar-link waves-effect waves-dark" href="#" aria-expanded="false"><i
-              class="mdi mdi-checkbox-marked-outline"></i><span class="hide-menu">PERMISOS </span></a>
-        </li>
-        <li class="sidebar-item">
-          <a class="sidebar-link sidebar-link waves-effect waves-dark" href="#" aria-expanded="false"><i
-            class="mdi mdi-eye"></i><span class="hide-menu">ASIGNAR </span></a>
-        </li>
-        <li class="sidebar-item">
-            <a class="sidebar-link sidebar-link waves-effect waves-dark" href="#" aria-expanded="false">
-            <i class="fas fa-users"></i><span class="hide-menu">USUARIOS </span></a>
-        </li>
-        <li class="sidebar-item">
-            <a class="sidebar-link sidebar-link waves-effect waves-dark" href="#" aria-expanded="false">
-            <i class="fas fa-coins"></i><span class="hide-menu">MONEDAS </span></a>
-        </li>
-        <li class="sidebar-item">
-            <a class="sidebar-link sidebar-link waves-effect waves-dark" href="#" aria-expanded="false">
-            <i class="fas fa-hand-holding-usd"></i><span class="hide-menu">ARQUEOS </span></a>
-        </li>
-        <li class="sidebar-item">
-            <a class="sidebar-link sidebar-link waves-effect waves-dark" href="#" aria-expanded="false">
-            <i class="mdi mdi-printer"></i><span class="hide-menu">REPORTES </span></a>
-        </li>
+
 
 
       </ul>
     </nav>
-    <!-- End Sidebar navigation -->
+    <!-- End Sidebar navigation for Admin-->
+
+    @else
+
+    <!-- Sidebar navigation for Participant-->
+    <nav class="sidebar-nav">
+        <ul id="sidebarnav" class="pt-4">
+            <li class="sidebar-item">
+                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('web.home')}}" aria-expanded="false"><i
+                    class="mdi mdi-home"></i><span class="hide-menu">HOME</span></a>
+              </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><i
+                class="mdi mdi-tag"></i><span class="hide-menu">LISTA DE EVENTOS</span></a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+      <!-- End Sidebar navigation for Participant-->
+
+    @endif
   </div>
   <!-- End Sidebar scroll-->
 </aside>
-<!-- ============================================================== -->
-<!-- End Left Sidebar - style you can find in sidebar.scss  -->
-<!-- ============================================================== -->
+
