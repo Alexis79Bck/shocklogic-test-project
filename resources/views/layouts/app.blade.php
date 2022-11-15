@@ -35,14 +35,14 @@
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
   <!-- ============================================================== -->
-  <div  id="main-wrapper" data-layout="vertical"  data-sidebartype="full"
+  <div class="vh-100" id="main-wrapper" data-layout="vertical"  data-sidebartype="full"
     data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 
     @include('layouts.theme.topbar')
     @auth
 
         @include('layouts.theme.sidebar')
-        <div class="page-wrapper vh-100">
+        <div class="page-wrapper ">
 
 
 
@@ -70,7 +70,7 @@
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
 
-       
+
     @endauth
 
     <!-- ============================================================== -->
