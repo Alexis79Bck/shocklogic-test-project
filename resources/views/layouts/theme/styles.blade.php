@@ -10,11 +10,7 @@
 <link href="{{ asset('theme/css/style.min.css')}}" rel="stylesheet" />
 
 <style>
-  body {
-    background-image: url({{ asset('theme/assets/images/orange-blur-abstract-background.jpg') }});
-    background-size: cover;
-
-  }
+ 
 .colored-toast.swal2-icon-success {
   background-color: #66db22 !important;
 }

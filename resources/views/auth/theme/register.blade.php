@@ -88,7 +88,7 @@
                                             <span  class="input-group-text bg-primary text-white h-100" id="basic-addon1" > <i class="fas fa-lock    "></i> </span>
                                         </div>
 
-                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required  placeholder="Password" style="border: 1px solid #2f3e96">
+                                        <input id="password" type="text" class="form-control @error('password') is-invalid @enderror" name="password" required  placeholder="Password" style="border: 1px solid #2f3e96">
 
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
@@ -104,7 +104,7 @@
                                             <span  class="input-group-text bg-primary text-white h-100" id="basic-addon1" > <i class="fas fa-lock    "></i> </span>
                                         </div>
 
-                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required  placeholder="Confirm Password" style="border: 1px solid #2f3e96">
+                                        <input id="password-confirm" type="text" class="form-control" name="password_confirmation" required  placeholder="Confirm Password" style="border: 1px solid #2f3e96">
                                     </div>
                                 </div>
 

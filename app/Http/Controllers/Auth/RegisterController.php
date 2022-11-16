@@ -53,8 +53,12 @@ class RegisterController extends Controller
             'firstname' => ['required', 'string'],
             'familyname' => ['required', 'string'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed']
-        ]);
+            'password' => ['required', 'string', 'min:8','regex:/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z])$/' , 'confirmed']
+            ],
+            [
+                'password.regex' => 'The :attribute must contain 1 uppercase letter, 1 lowercase letter, 1 digit and 1 special symbol: !, @, #, $, %, ^, &, *, - '
+            ]
+        );
     }
 
 

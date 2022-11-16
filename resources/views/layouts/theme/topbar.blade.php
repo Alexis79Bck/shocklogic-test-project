@@ -1,7 +1,7 @@
 <!-- ============================================================== -->
 <!-- Topbar header - style you can find in pages.scss -->
 <!-- ============================================================== -->
-<header class="topbar" style="background-color: #7460ee">
+<header class="topbar" >
     @auth
     <nav class="navbar top-navbar navbar-expand-md " >
         <div class="navbar-header" >
@@ -21,7 +21,7 @@
         <div class="navbar-collapse collapse"  >
 
             <ul class="navbar-nav  mx-auto">
-                    <span class="display-5 text-center text-light">{{auth()->user()->firstname}} {{auth()->user()->familyname}}</span>
+                    <span class="display-5 text-center text-dark">{{auth()->user()->firstname}} {{auth()->user()->familyname}}</span>
             </ul>
 
 
