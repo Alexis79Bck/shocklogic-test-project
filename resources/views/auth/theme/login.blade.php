@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="d-flex float-end">
+<div class="container">
 
     @include('common.messages')
 
@@ -15,12 +15,11 @@
 
     <div class="col mb-3">
 
-            <div class=" card w-75" >
-
+            <div class=" card " >
                 <div class="card-body">
                     <div class="container">
                         <div class="col ">
-                            <img src="{{ asset('theme/assets/images/' . config('app.logo_image')) }}" class="mx-auto d-block "  alt="Logo" width="224" height="224">
+                            <img src="{{ asset('theme/assets/images/' . config('app.logo_text')) }}" class="mx-auto d-block "  alt="Logo" width="224" height="224">
                         </div>
 
                         <div class="col">

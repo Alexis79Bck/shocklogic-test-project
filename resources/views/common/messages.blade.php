@@ -1,7 +1,7 @@
 @if (session('message'))
-    <div class="alert alert-success alert-dismissible fade show " role="alert" id="alert-box">
+    <div class=" alert alert-success alert-dismissible fade show " role="alert" id="alert-box">
         <i class="fas fa-info-circle"></i> {{ session('message') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-sm float-end" data-bs-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></button>
     </div>
 @endif
 

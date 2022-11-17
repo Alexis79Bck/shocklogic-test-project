@@ -23,7 +23,7 @@
                         <div class="card-header text-light text-center bg-primary h4" >New Account</div>
 
                         <div class="card-body">
-                            <form method="POST" action="{{ route('register') }}" id="registerForm">
+                            <form method="POST" action="{{ route('newAccount') }}" id="registerForm">
                                 @csrf
 
                                 <div class="row mb-1">
@@ -89,7 +89,14 @@
                                         </div>
 
                                         <input id="password" type="text" class="form-control @error('password') is-invalid @enderror" name="password" required  placeholder="Password" style="border: 1px solid #2f3e96">
-
+                                        {{ session('dataInvalidate["digitStatus"]') }}
+                                        <div  class="form-text text-dark"> The password is required and must contain at least:
+                                            <span class="fw-bold text-{{ session('8CharLenghtStatus') }}">8 character lenght</span>,
+                                            <span class="fw-bold text-{{ session('digitStatus') }}">1 digit</span>,
+                                            <span class="fw-bold text-{{ session('lowercaseCharStatus') }}">1 lowercase char</span>,
+                                            <span class="fw-bold text-{{ session('uppercaseCharStatus') }}">1 uppercase char</span> and
+                                            <span class="fw-bold text-{{ session('specialCharStatus') }}">1 special char</span>.
+                                        </div>
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -121,7 +128,7 @@
                             <div class="row mb-0 mx-auto">
                                 <span class="alert alert-info text-end" >
                                     <strong>Have an account? Click here to
-                                        <a href="{{ route('login') }}" class="text-link" >
+                                        <a href="#" class="text-link" >
                                             Log In.
                                         </a>
                                     </strong>
