@@ -4,6 +4,8 @@ namespace App\Http\Controllers\CustomAuth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
 use App\Models\User;
 
 class LoginController extends Controller
@@ -31,7 +33,7 @@ class LoginController extends Controller
 
         }else{
             //dd('Cuando es invalido.', $request->password, $validate);
-            return redirect()->to('register')->with([
+            return redirect()->to('login')->with([
                 'digitStatus'=>$validate['digitStatus'],
                 '8CharLenghtStatus' => $validate['8CharLenghtStatus'],
                 'lowercaseCharStatus'=>$validate['lowercaseCharStatus'],
@@ -42,7 +44,17 @@ class LoginController extends Controller
         }
 
     }
+    public function login(Request $request)
+    {
+        $user = User::where('email', $request->loginEmail)->first();
+        if (isset($user->id)   ){
+            dd('desde la funcion login', $user);
+            $this->validateLogin($user, $request->loginPassword);
 
+        }else{
+            return redirect()->to('/login')->with('message-error','This Email is not found in our records.');
+        }
+    }
 
 
     private function validatePassword(string $password) {
@@ -100,6 +112,25 @@ class LoginController extends Controller
                 'uppercaseCharStatus' => $hasUppercaseCharStatus,
                 'specialCharStatus' => $hasSpecialCharStatus
                 ];
+        }
+    }
+
+    private function validateLogin(User $user, string $inputPassword){
+        if (Hash::check($inputPassword, $user->password)) {
+
+            if ($user->active) {
+                if ($user->admin){
+                    return redirect()->route('admin.home');
+                }else{
+
+                    return redirect()->to('web.home');
+                }
+            }else{
+                return redirect()->to('/login')->with('message-error','Your account is Inactive.');
+            }
+
+        }else{
+            return redirect()->to('/login')->withInput()->with('message-error','The email or password is invalid.');
         }
     }
 }

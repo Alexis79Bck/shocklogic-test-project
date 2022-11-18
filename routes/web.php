@@ -9,9 +9,15 @@ use App\Http\Controllers\WebController;
 use App\Http\Livewire\Admin\Events;
 use App\Http\Livewire\Admin\Participants;
 
+Route::get('/', function () {
+    return redirect()->to('/login');
+});
+
 Route::get('/login', function () {
     return view('auth.theme.login');
 })->name('login');
+
+Route::post('/validate-login', [LoginController::class,'login'])->name('validate-login');
 
 Route::get('/register', function () {
     return view('auth.theme.register');
